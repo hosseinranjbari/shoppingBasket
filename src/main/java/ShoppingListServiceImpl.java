@@ -8,6 +8,9 @@ public class ShoppingListServiceImpl implements ShoppingListService {
 
     @Override
     public void saveItems(List<Item> items) {
+        for (Item item : items) {
+            item.check();
+        }
 
     }
 }
